@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Random Post</title>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<style>
+body {
+  background:0 0;
+  margin:0;
+  padding:0;
+  color:#333;
+  font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;
+}
+a {
+  text-decoration:none;
+  transition:all 400ms ease-in-out;
+}
+*{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+/* Recent Post Material Design by IDBLANTER.COM */
+li.recent-posts:hover{box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 0 5px 10px 0 rgba(0,0,0,0.12), 0 5px 10px -5px rgba(0,0,0,0.2)}
+.recenthd,li.recent-posts{box-shadow:0 0 2px 0 rgba(0,0,0,.12),0 2px 2px 0 rgba(0,0,0,.24);background:#fff;border-radius:3px;overflow:hidden}
+a.gorecent{float:right;font-size:11px;padding:5px 10px;margin:-4px}
+.recenthd h2{display:inline-block;text-transform:uppercase;font-size:15px;margin:0}
+.recenthd svg{float:left;margin-right:10px}
+.recenthd{padding:15px;text-align:left;margin-bottom:10px}ul#recent-posts{margin:0;padding:0}
+li.recent-posts:nth-child(12),li.recent-posts:nth-child(4),li.recent-posts:nth-child(8){margin-right:0}
+li.recent-posts{transition:all .3s ease-in-out;list-style:none;padding:0;margin-bottom:20px;text-align:center;width:260px;max-width:100%;float:left;height:260px;margin-right:20px}
+.title_post a{color:#515151}li.recent-posts a:hover{color:#111}
+.title_post{height:30px;overflow:hidden;padding:10px;line-height:1.4;font-size:13.4px}
+.recent-posts img{height:190px;width:100%}
+a.gorecent{text-transform:uppercase;line-height:1.5;font-size:11px;font-weight:700;color:#fff;border:none;padding:7px 15px 7px;border-radius:5px;background:#1976d2;cursor:pointer;outline:0;box-shadow:0 2px 2px 0 rgba(154,154,154,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.12);margin-right:7px}
+@media screen and (max-width:768px){.howtouse{width:39%}#safe-wrapper{width:auto;padding:18px;margin:-100px 0 0}li.recent-posts{width:45.6%}}
+@media screen and (max-width:480px){li.recent-posts{width:100%}}
+</style>
+</head>
+<body>
+<script'>
+//<![CDATA[
+// Recent Post Settings
+var recentpost_url = "http://testtemplatelagikuy.blogspot.com/";
+var numPosts = 6;
+var recentpost_label = "Produk";
+// Recent Post
+function recentPosts(e){if(document.getElementById("recent-posts")){for(var t,s,r=e.feed.entry,n="",a=document.getElementById("recent-posts"),l=0;l<numPosts;l++){for(var c=0;c<numPosts;c++)if("alternate"==r[l].link[c].rel){s=r[l].link[c].href;break}"media$thumbnail"in r[l]?u=r[l].media$thumbnail.url.replace(/.*?:\/\//g,"//").replace(/\/s[0-9]+\-c/g,"/s300"):u="https://1.bp.blogspot.com/-jHWwEwTEwQ4/WJJ4k71QSYI/AAAAAAAApVc/XO_OitR_VGQS_Wquq1pv1h1D-dgiejSuQCLcB/s90/nothumb_large.png";var t=r[l].title.$t;n+='<li class="recent-posts"><a href="'+s+'" title="'+t+'" target="_blank"><img src="'+u+'" alt="'+t+'"></a><div class="title_post"><a href="'+s+'" title="'+t+'" target="_blank">'+t+"</a></div></li>"}a.innerHTML=n}}var rcp=document.createElement("script");rcp.src=recentpost_url+"/feeds/posts/default/-/"+recentpost_label+"?orderby=published&alt=json-in-script&max-results="+numPosts+"&callback=recentPosts",document.getElementsByTagName("head")[0].appendChild(rcp);
+// Recent Post Title
+var titlerecentpost = document.getElementById("xtitlex");
+titlerecentpost.innerHTML='<div class="recenthd"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg><h2>'+recentpost_label+'</h2><a class="gorecent" href="'+recentpost_url+'/search/label/'+recentpost_label+'" title="Recent Post" target="_blank">View More</a></div>';
+//]]>
+</script>
+</body>
+</html>
